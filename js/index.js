@@ -1,13 +1,11 @@
-import {
-  Camera,
-  Group,
-  Scene,
-} from 'https://unpkg.com/three/build/three.module.js'
+import World from './world.js'
 
-import { OrbitControls } from 'https://unpkg.com/three/examples/jsm/controls/OrbitControls.js'
-import { GLTFLoader } from 'https://unpkg.com/three/examples/jsm/loaders/GLTFLoader.js'
+const init = () => {
+	const root = document.getElementById('root')
+	
+	const world = new World(root)
+	world.render()
 
-const closeLoader = () => {
 	const loader = document.getElementById('loader')
 	loader.style.opacity = 0;
 	loader.ontransitionend = () => {
@@ -15,4 +13,5 @@ const closeLoader = () => {
 	}
 }
 
-const root = document.getElementById('root')
+window.onload = init
+
