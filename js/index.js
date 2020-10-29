@@ -4,7 +4,7 @@ const init = () => {
 	const root = document.getElementById('root')
 	
 	const world = new World(root)
-	world.render()
+	world.start()
 
 	const loader = document.getElementById('loader')
 	loader.style.opacity = 0;

@@ -3,9 +3,11 @@ import {
 } from 'https://unpkg.com/three/build/three.module.js'
 
 const createRenderer = () => {
-	const renderer = new WebGLRenderer()
+	const renderer = new WebGLRenderer({
+		antialias: true
+	})
 
-	render.physicallyCorrectLights = true
+	renderer.physicallyCorrectLights = true
 
 	return renderer
 }
