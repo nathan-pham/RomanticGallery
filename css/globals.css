@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+:root {
+  --crayola: #f5cb5c;
+  --eerie: #242423;
+  --white: #e8eddf;
+  --wolf: #cfdbd5;
+  --jet: #333533;
+}
+
+html, body {
+	height: 100%;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	overflow: hidden;
+	font-family: 'Oswald', sans-serif;
+	background: var(--eerie);
+}
+*, *::before, *::after {
+	box-sizing: inherit;
+}
+.crayola {
+	color: var(--crayola);
+}
+.white {
+	color: var(--white);
+}
