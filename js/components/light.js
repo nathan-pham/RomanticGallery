@@ -1,13 +1,20 @@
 import {
+	AmbientLight,
+	HemisphereLight,
 	DirectionalLight
 } from 'https://unpkg.com/three/build/three.module.js'
 
+// new HemisphereLight(sky, ground, intensity)
 const createLight = () => {
-	let light = new DirectionalLight('white', 8)
+	const ambient = new AmbientLight('white', 2)
+	
+	const main = new DirectionalLight('white', 5)
+	main.position.set(10, 10, 10)
 
-	light.position.set(10, 10, 10)
-
-	return light
+	return {
+		ambient,
+		main
+	}
 }
 
 export default createLight

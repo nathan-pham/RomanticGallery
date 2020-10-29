@@ -5,6 +5,7 @@ const init = () => {
 	
 	const world = new World(root)
 	world.start()
+	// world.render()
 
 	const loader = document.getElementById('loader')
 	loader.style.opacity = 0;
